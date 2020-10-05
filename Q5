@@ -1,0 +1,4 @@
+SELECT user_info .username, user_info .emailaddress 
+FROM i_users AS user_info , (Select userid, MAX(num_log) 
+                             From (Select userid, Count(login_date) as num_log From i_user_login_logs) as User 
+WHERE User.num_log > 3 && userid <> 1)) as Max_log WHERE Max_log.userid = user_info.userid

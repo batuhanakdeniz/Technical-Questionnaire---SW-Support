@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+// To execute C++, please define "int main()"
+int main() {
+  int a=1, b=2;
+  cout << "a: \t" << a << "b: \t" << b << endl;
+  a = a + b;
+  b = a - b;
+  a = a - b;
+  cout << "a: \t" << a << "b: \t" << b << endl;
+  return 0;
+}

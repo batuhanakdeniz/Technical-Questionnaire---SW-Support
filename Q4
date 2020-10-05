@@ -1,0 +1,1 @@
+SELECT COUNT(userid) FROM (Select userid, Count(login_date) as num_log From i_user_login_logs) as User WHERE User.num_log > 3
